@@ -1,0 +1,4 @@
+firmware/job_alerts/config.h
+public/
+__pycache__/
+*.pyc

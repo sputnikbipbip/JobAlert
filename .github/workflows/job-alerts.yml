@@ -1,0 +1,86 @@
+name: Search and publish jobs
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: job-alerts-state
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Check out searcher
+        uses: actions/checkout@v4
+      - name: Check out state repository
+        uses: actions/checkout@v4
+        with:
+          path: state-repo
+          fetch-depth: 0
+      - name: Select state branch
+        working-directory: state-repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git show-ref --verify --quiet refs/remotes/origin/job-alerts-state; then
+            git switch -C job-alerts-state origin/job-alerts-state
+          else
+            git switch --orphan job-alerts-state
+            git rm -rf --ignore-unmatch .
+          fi
+          mkdir -p public
+      - name: Search sources
+        id: scan
+        continue-on-error: true
+        run: python3 searcher/job_alerts.py scan --directory state-repo/public
+      - name: Persist outbox before sending
+        working-directory: state-repo
+        run: |
+          git add public
+          if ! git diff --cached --quiet; then
+            git commit -m "Update job search state"
+            git push origin HEAD:job-alerts-state
+          fi
+      - name: Send Telegram alerts
+        id: deliver
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 searcher/job_alerts.py deliver --directory state-repo/public
+      - name: Persist delivery progress
+        if: always() && steps.scan.outcome != 'skipped'
+        working-directory: state-repo
+        run: |
+          git add public
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Telegram delivery progress"
+            git push origin HEAD:job-alerts-state
+          fi
+      - name: Prepare public feed
+        run: |
+          mkdir -p site
+          cp state-repo/public/jobs.json site/jobs.json
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload public feed
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy public feed
+        id: deploy
+        uses: actions/deploy-pages@v4
+      - name: Report search or notification failures
+        if: steps.scan.outcome == 'failure' || steps.deliver.outcome == 'failure'
+        run: exit 1
