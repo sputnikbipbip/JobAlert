@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-11-18T17:39:27Z",
+  "sources": {
+    "Remotive": {
+      "ok": true,
+      "error": null
+    },
+    "Arbeitnow": {
+      "ok": true,
+      "error": null
+    },
+    "Jobicy": {
+      "ok": true,
+      "error": null
+    }
+  },
+  "jobs": [
+    {
+      "id": "jobicy:155746",
+      "title": "Machine Learning Engineer (Governance ML Platform)",
+      "company": "EDB",
+      "location": "EMEA",
+      "work_mode": "Remote (check eligibility)",
+      "category": "AI engineering",
+      "published_at": "2026-11-18T04:10:31Z",
+      "url": "https://jobicy.com/jobs/155746-machine-learning-engineer-governance-ml-platform",
+      "source": "Jobicy"
+    },
+    {
+      "id": "jobicy:155579",
+      "title": "AI Engineer - 4 Day Week + Remote",
+      "company": "Laminar Projects",
+      "location": "Poland, Portugal",
+      "work_mode": "Remote (check eligibility)",
+      "category": "AI engineering",
+      "published_at": "2026-11-17T03:25:18Z",
+      "url": "https://jobicy.com/jobs/155579-ai-engineer-4-day-week-remote",
+      "source": "Jobicy"
+    }
+  ]
+}
