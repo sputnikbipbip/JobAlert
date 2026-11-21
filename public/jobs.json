@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T18:25:02Z",
+  "generated_at": "2026-11-21T00:40:23Z",
   "sources": {
     "Remotive": {
       "ok": true,
@@ -10,8 +10,8 @@
       "error": null
     },
     "Jobicy": {
-      "ok": false,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "error": null
     }
   },
   "jobs": [
