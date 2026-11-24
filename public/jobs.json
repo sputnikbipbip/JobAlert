@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T00:38:28Z",
+  "generated_at": "2026-11-24T06:32:50Z",
   "sources": {
     "Remotive": {
       "ok": true,
@@ -46,17 +46,6 @@
       "category": "AI engineering",
       "published_at": "2026-11-18T04:10:31Z",
       "url": "https://jobicy.com/jobs/155746-machine-learning-engineer-governance-ml-platform",
-      "source": "Jobicy"
-    },
-    {
-      "id": "jobicy:155579",
-      "title": "AI Engineer - 4 Day Week + Remote",
-      "company": "Laminar Projects",
-      "location": "Poland, Portugal",
-      "work_mode": "Remote (check eligibility)",
-      "category": "AI engineering",
-      "published_at": "2026-11-17T03:25:18Z",
-      "url": "https://jobicy.com/jobs/155579-ai-engineer-4-day-week-remote",
       "source": "Jobicy"
     }
   ]
