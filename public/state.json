@@ -2,17 +2,6 @@
   "sent": {},
   "pending": [
     {
-      "id": "jobicy:155746",
-      "title": "Machine Learning Engineer (Governance ML Platform)",
-      "company": "EDB",
-      "location": "EMEA",
-      "work_mode": "Remote (check eligibility)",
-      "category": "AI engineering",
-      "published_at": "2026-11-18T04:10:31Z",
-      "url": "https://jobicy.com/jobs/155746-machine-learning-engineer-governance-ml-platform",
-      "source": "Jobicy"
-    },
-    {
       "id": "jobicy:155939",
       "title": "Full-Stack Engineer (Backend Leaning) - Creative Agents",
       "company": "Elevenlabs",
@@ -32,6 +21,17 @@
       "category": ".NET engineering",
       "published_at": "2026-11-21T03:10:31Z",
       "url": "https://jobicy.com/jobs/156146-software-engineer-net",
+      "source": "Jobicy"
+    },
+    {
+      "id": "jobicy:149563",
+      "title": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
+      "company": "Canonical",
+      "location": "Anywhere",
+      "work_mode": "Remote (check eligibility)",
+      "category": "AI engineering",
+      "published_at": "2026-11-25T03:10:30Z",
+      "url": "https://jobicy.com/jobs/149563-python-and-kubernetes-software-engineer-data-workflows-ai-ml-analytics",
       "source": "Jobicy"
     }
   ]

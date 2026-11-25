@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:42:36Z",
+  "generated_at": "2026-11-25T06:33:08Z",
   "sources": {
     "Remotive": {
       "ok": true,
@@ -15,6 +15,17 @@
     }
   },
   "jobs": [
+    {
+      "id": "jobicy:149563",
+      "title": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
+      "company": "Canonical",
+      "location": "Anywhere",
+      "work_mode": "Remote (check eligibility)",
+      "category": "AI engineering",
+      "published_at": "2026-11-25T03:10:30Z",
+      "url": "https://jobicy.com/jobs/149563-python-and-kubernetes-software-engineer-data-workflows-ai-ml-analytics",
+      "source": "Jobicy"
+    },
     {
       "id": "jobicy:156146",
       "title": "Software Engineer (.NET)",
@@ -35,17 +46,6 @@
       "category": "AI engineering",
       "published_at": "2026-11-19T03:30:18Z",
       "url": "https://jobicy.com/jobs/155939-full-stack-engineer-backend-leaning-creative-agents",
-      "source": "Jobicy"
-    },
-    {
-      "id": "jobicy:155746",
-      "title": "Machine Learning Engineer (Governance ML Platform)",
-      "company": "EDB",
-      "location": "EMEA",
-      "work_mode": "Remote (check eligibility)",
-      "category": "AI engineering",
-      "published_at": "2026-11-18T04:10:31Z",
-      "url": "https://jobicy.com/jobs/155746-machine-learning-engineer-governance-ml-platform",
       "source": "Jobicy"
     }
   ]
