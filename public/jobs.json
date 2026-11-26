@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T06:32:55Z",
+  "generated_at": "2026-11-26T12:29:13Z",
   "sources": {
     "Remotive": {
       "ok": true,
@@ -15,6 +15,17 @@
     }
   },
   "jobs": [
+    {
+      "id": "jobicy:154031",
+      "title": "Software Engineer",
+      "company": "Capital on Tap",
+      "location": "Portugal",
+      "work_mode": "Remote (check eligibility)",
+      "category": ".NET engineering",
+      "published_at": "2026-11-26T04:20:50Z",
+      "url": "https://jobicy.com/jobs/154031-software-engineer-11",
+      "source": "Jobicy"
+    },
     {
       "id": "jobicy:149563",
       "title": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics",
